@@ -1,0 +1,44 @@
+Token:- dffaaf069879f07c79c8e84c62379111f52fed6134da4be300d705598a29da76
+
+///<reference types="Cypress"/>
+
+describe("Verifying the Api Request of Gorest Website",function(){
+
+    it("Verify the GET Request Api",function(){
+        cy.request({
+            methode:"GET",
+            url:"https://gorest.co.in/public/v2/posts",
+            headers:{
+                Authorization:"dffaaf069879f07c79c8e84c62379111f52fed6134da4be300d705598a29da76"
+            }
+        }).then((res)=>{
+            cy.log(res)
+        })
+    })
+})
+
+posts
+curl -i -H "Accept:application/json"
+-H "Content-Type:application/json"
+-H "Authorization: Bearer dffaaf069879f07c79c8e84c62379111f52fed6134da4be300d705598a29da76"
+-XPOST "https://gorest.co.in/public/v2/users"
+-d 
+{
+"name":"Tenali Ramakrishna",
+"gender":"male",
+"email":"tenali.ramakrishna@15ce.com",
+"status":"active"
+}
+
+
+Update :-PUT
+
+curl -i 
+-H "Accept:application/json" 
+-H "Content-Type:application/json" 
+-H "Authorization: Bearer dffaaf069879f07c79c8e84c62379111f52fed6134da4be300d705598a29da76" 
+-XPOST "https://gorest.co.in/public/v2/graphql" 
+-d '{"query":"mutation{updateUser(input: 
+{id: 788 
+name: \"Allasani Peddana\" email: \"allasani.peddana@15ce.com\" status: \"active\"}) 
+{user{id name gender email status}}}"}'

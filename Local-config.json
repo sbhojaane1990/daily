@@ -1,0 +1,4 @@
+{
+    "extends": "./cypress.json",
+    "baseUrl": "https://www.guru99.com"
+  }

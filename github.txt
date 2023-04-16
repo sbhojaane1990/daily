@@ -1,0 +1,25 @@
+
+git init
+git status  -  gives status of file tracking
+git add .
+git add script.js
+git commit -m "added"
+git branch -M main --- to  create a branch
+git remote add origin https://github.com/Minskoleopc/Minksole3.git -- connecting local to remote
+git push -u origin main - pushing code from local to remote
+git pull
+git clone https://github.com/Minskoleopc/Minksole3.git
+git diff script.js   - difference between working and staging
+git checkout HEAD fileName - make working directory same as last commit
+git reset HEAD fileName - makes staging similat to last commit  last commit
+git log
+git show HEAD
+git reset 7charofkey
+
+
+
+
+
+
+
+working ---- staging ----- local r =====> remote repo

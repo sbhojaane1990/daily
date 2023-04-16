@@ -1,0 +1,28 @@
+    Uploading file using fixture
+    starting install plugins
+    goto https://www.npmjs.com/package/cypress-file-upload
+    then copy plugins run it into command line
+    npm install --save-dev cypress-file-upload
+    Then 
+    copy import 'cypress-file-upload';
+    past it into suppoert>commands.js file line no 26
+Type and run the code
+
+    ///<reference types = "Cypress"/>
+
+describe('FileUploading ',()=>{
+    it('TC_ 01 fileuploading verification',()=>{
+        cy.visit('https://automationexercise.com/contact_us')
+        let youpath='my.txt';
+        cy.get('[name="upload_file"]').attachFile(youpath)
+        cy.get('[name="upload_file"]').should('contain',youpath)
+      
+    })
+    it.only('Drag and drop methode verify',()=>{
+        
+        cy.visit('https://css-tricks.com/examples/DragAndDropFileUploading/')
+        let y='my.txt';
+        cy.get('#file').attachFile(y)
+        cy.get('div.box__success').should('contain.text','Done')
+    })
+ })
